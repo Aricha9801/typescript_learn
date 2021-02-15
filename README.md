@@ -118,17 +118,23 @@ TypeScript中的基本类型：
 
   - ```typescript
     let obj: object = {};
+    //define object
+    let c: {name: string,[propname: string]: any}
+    c={name:'John', age: 18, gender: 'male'}
+    //define function
+    let d: (a:number, b:number)=>number;
     ```
 
 - array
 
   - ```typescript
+    //two ways
     let list: number[] = [1, 2, 3];
     let list: Array<number> = [1, 2, 3];
     ```
 
 - tuple
-
+  - 固定长度的数组
   - ```typescript
     let x: [string, number];
     x = ["hello", 10]; 
@@ -158,6 +164,13 @@ TypeScript中的基本类型：
     }
     let c: Color = Color.Green;
     ```
+
+- 类型的别名
+  
+  ```typescript
+  type myType-number|string|boolean
+  let k: myType
+  ```
 
 - 类型断言
 
